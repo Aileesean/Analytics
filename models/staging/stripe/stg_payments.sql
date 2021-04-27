@@ -8,4 +8,4 @@ select
     amount / 100 as amount,
     created as created_at
 
-FROM `boreal-mode-305801.jaffle_shop.Stripe_payments`
+FROM {{ source('jaffle_shop', 'Stripe_payments') }}

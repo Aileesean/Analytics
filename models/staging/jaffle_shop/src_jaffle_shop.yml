@@ -4,5 +4,5 @@ sources:
   - name: jaffle_shop
     database: boreal-mode-305801
     tables:
-      - name: customers
-      - name: orders
+      - name: jaffle_customer
+      - name: jaffle_orders
