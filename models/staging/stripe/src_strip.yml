@@ -5,3 +5,5 @@ sources:
     database: boreal-mode-305801
     tables:
       - name: Stripe_payments
+        columns: 
+         - id
