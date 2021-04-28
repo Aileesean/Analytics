@@ -6,7 +6,7 @@ with orders as (
         order_date,
         status
 
-    FROM `boreal-mode-305801.jaffle_shop.jaffle_orders`
+    from {{ source('jaffle_shop', 'jaffle_orders') }}
     -- completed, shipped, returned, placed, return_pending
 
 )

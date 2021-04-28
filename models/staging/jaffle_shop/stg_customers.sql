@@ -5,7 +5,6 @@ with customers as (
         first_name,
         last_name
 
-    FROM `boreal-mode-305801.jaffle_shop.jaffle_customer`
-
+    from {{ source('jaffle_shop', 'jaffle_customer') }}
 )
 select * from customers
