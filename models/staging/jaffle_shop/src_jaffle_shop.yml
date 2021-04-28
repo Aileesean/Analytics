@@ -2,7 +2,23 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: A clone of a postgres application database.
     database: boreal-mode-305801
     tables:
       - name: jaffle_customer
+        description: boreal-mode-305801 customer data.
+         columns:
+          - name: id
+            description: Primary key for customers. 
+            tests:
+             - unique
+             - not_null
+
       - name: jaffle_orders
+        description:  boreal-mode-305801 orders data.
+        columns:
+         - name: id
+           description: Primary key for orders. 
+           tests:
+             - unique
+             - not_null
