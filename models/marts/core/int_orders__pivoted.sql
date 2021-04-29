@@ -4,7 +4,7 @@ with payments as (
    select * from {{ ref('stg_payments') }}
 ),
 
-final as (
+pivoted as (
    select
        order_id,
        {% for payment_method in payment_methods -%}
@@ -22,4 +22,4 @@ final as (
    group by 1
 )
 
-select * from final
+select * from pivoted
